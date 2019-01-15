@@ -3,12 +3,25 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: $main_font;
+}
+
+// body{
+//     background-color: $header_bg;
+// }
+
+.callToAction_btn{
+    border: 0;
+    padding: 12px 70px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, $cyan, $blue);
+    cursor: pointer;
 }
 
 
 .grid{
     display: grid;
-    padding: 50px;
+    // padding: 50px;
     background-color: $header_bg;
     grid-template-columns: repeat(4, 1fr);
 
@@ -16,5 +29,91 @@
         grid-column: 1/5;
         display: flex;
         justify-content: space-between;
+        padding: 50px 50px 0 50px;
+        .logo{
+            img{
+                width: 60%;
+            }
+        }
+        ul{
+            li{
+                list-style: none;
+                display: inline-block;
+                a{
+                    padding: 10px 20px;
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    header{
+        grid-column: 1/5;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        .illustration_img{
+            grid-column: 1/5;
+            width: 35%;
+        }
+        .callToAction_Wrapper{
+            text-align: center;
+            color: $white;
+            grid-column: 1/5;
+            z-index: 1;
+            position: absolute;
+            bottom: 235px;
+            p{
+                padding: 30px 0;
+            }
+        }
+        .mountains{
+            grid-column: 1/5;
+            width: 100%;
+            position: relative;
+        }
+    }
+    .four_icons{
+        background-color: $main_bg;
+        position: relative;
+        grid-column: 1/5;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 50px;
+        margin-top: -35px;
+        .icon{
+            text-align: center;
+            color: $white;
+            h3{
+                padding: 20px 0 10px 0;
+            }
+            p{
+                font-size: 12px;
+            }
+            .img_wrapper{
+                width: 95px;
+                height: 90px;
+                margin: 0 auto;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .icon1{
+            grid-column: 2/3;
+        }
+        .icon2{
+            grid-column: 3/4;
+        }
+        .icon3{
+            grid-column: 2/3;
+        }
+        .icon4{
+            grid-column: 3/4;
+        }
     }
 }
