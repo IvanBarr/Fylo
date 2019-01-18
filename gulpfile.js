@@ -13,6 +13,7 @@ var imagemin    = require('gulp-imagemin');
 var jshint      = require('gulp-jshint');
 var pngquant    = require('imagemin-pngquant');
 var browserSync = require('browser-sync');
+var wait        = require('gulp-wait');
 
 
 var src = {
@@ -41,6 +42,7 @@ gulp.task('sass', function(){
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(sourcemaps.init())
+    .pipe(wait(100))
     .pipe(sass())
     .pipe(prefix('last 2 versions'))
     .pipe(concat(build.min_css))
