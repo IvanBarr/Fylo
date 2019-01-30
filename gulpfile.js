@@ -23,10 +23,10 @@ var src = {
 };
 
 var build = {
-  js: "build/js",
-  css: "build/css",
-  img: "build/images/",
-  html: "build/*.html",
+  js: "docs/js",
+  css: "docs/css",
+  img: "docs/images/",
+  html: "docs/*.html",
   min_css: 'main.min.css',
   min_js: 'app.min.js'
 };
@@ -82,7 +82,7 @@ gulp.task('img', function(){
 
 gulp.task('watch', function(){
   browserSync.init({
-    server: './build'
+    server: './docs'
   });
   gulp.watch(src.sass, ['sass']);
   gulp.watch(src.js, ['js']);
